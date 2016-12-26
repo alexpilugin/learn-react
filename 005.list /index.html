@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>A.Pilugin. Hello World!</title>
+    <meta charset="utf-8">
+<!-- ERROR:
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.js"></script>
+-->
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.19.0/babel.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,800" rel="stylesheet">
+
+    <style>
+        body { 
+            background-color: lightgray;
+            font-family: 'Roboto', sans-serif;
+        }
+        div * {
+            color: #13527c;
+        }
+        h3 {
+            margin: 0px;
+        }
+        p {
+            margin-bottom: 0px;
+        }
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .links-list {
+            padding: 0px;
+            margin: 0px;
+        }
+        .item {
+            display:block;
+            border-bottom: 1px red solid;
+            padding: 5px;
+            -webkit-transition: background-color 650ms linear;
+            -moz-transition: background-color 650msv linear;
+            -o-transition: background-color 650ms linear;
+            -ms-transition: background-color 650ms linear;
+            transition: background-color 650ms linear;
+        }
+        .item:hover {
+            cursor: pointer;
+            background-color:white;
+            -webkit-transition: background-color 650ms linear;
+            -moz-transition: background-color 650ms linear;
+            -o-transition: background-color 650ms linear;
+            -ms-transition: background-color 650ms linear;
+            transition: background-color 650ms linear;
+        }
+        .votes {
+            float: right;
+            width: 70px;
+            height: 50px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            cursor: pointer;
+            border: 2px solid;
+            border-radius: 5px;
+            background-color: white;
+        }
+        hr {
+            border: none;
+            color: red;
+            background-color: red;
+            height: 2px;
+            clear: both;
+            margin: 0px;
+        }
+        .clear {
+            clear: both;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        div { color: red; }
+        .centered { text-align: center; }
+        .description {
+            float: left;
+        }
+        .svg-star {
+            float: left;
+            width: 65px;
+            height: 65px;
+            margin-right: 10px;
+            margin-left: 10px;
+           /* background-size: 45px 45px;
+            background-size: cover; */
+            background-color: mediumvioletred;
+            mask-image: url('star-icon.svg');
+            mask-repeat: no-repeat;
+            -webkit-mask-image:  url('star-icon.svg');
+            -webkit-mask-repeat: no-repeat;
+        }
+        .svg-star:hover {
+            background-color:antiquewhite;
+            cursor: pointer;    
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class=" centered header">Alex Pilugin. My links</h1>
+    <hr />
+    <div id="content"> </div>
+</div>
+
+
+<div id="root">
+    <!-- This element's contents will be replaced with your component. -->
+</div>
+
+
+<script type = "text/babel">
+
+var Data = [{ id: 1, title: 'My profile on LinkedIn', 
+    url: 'https://uk.linkedin.com/in/alexpilugin',
+    description: 'This is description of the first link',
+    votes: '10',
+    //votes: generateVoteCount(),
+},
+{ id: 2, title: 'My profile on CreativePool', 
+    url: 'https://creativepool.com/pilugin/projects/',
+    description: 'This is description of the second link',
+    votes: '9',
+    //votes: generateVoteCount(),    
+},
+{ id: 3, title: 'html5 video player skin', 
+url: 'https://goo.gl/8ykWRe',
+    description: 'Animate. html5 video player skin',
+    votes: '8',
+    //votes: generateVoteCount(),    
+},
+{ id: 4, title: 'CSS Labyrinth', 
+url: 'https://goo.gl/J4Nwke',
+    description: 'Simple CSS3/JavaScript game',
+    votes: '7',
+    //votes: generateVoteCount(),    
+}]
+
+    const Product = React.createClass({ 
+        handleUpVote: function (){
+            this.props.onVote(this.props.id); //onVote=this.handleProductUpVote(productId)
+        },
+        render: function () {
+            return (
+            <div className='item'>
+                <div className='image svg-star'></div>
+                <div className='description'>
+                <h3><a href={this.props.url}> {this.props.title}</a></h3>
+                <p>{this.props.description}</p>
+                </div>
+                <button className='votes' onClick={this.handleUpVote}> {this.props.votes} </button>
+                <div className='clear'></div>
+            </div>
+            ) 
+        }
+    });
+
+    const ProductList = React.createClass({
+        handleProductUpVote: function (productId) {
+            console.log(productId + " was upvoted.");
+        },
+        render: function() {
+            const products = Data.map((product) => {
+                return (
+                    <Product
+                        key={'product-' + product.id}
+                        id = {product.id}
+                        title ={product.title}
+                        description={product.description}
+                        url={product.url}
+                        votes={product.votes}
+                        onVote={this.handleProductUpVote}
+                    />
+                );
+            });
+            return (
+                <div className='links-list'>
+                {products}
+                </div>
+            );
+        },
+    });
+    var content = document.getElementById('content');
+    ReactDOM.render(<ProductList />,content);
+
+
+/*
+//https://gist.github.com/danawoodman/9cfddb1a0c934a35f31a
+var HelloMessage = React.createClass({
+  render: function () {
+    return <h1>Hello {this.props.message}!</h1>;
+  }
+});
+
+ReactDOM.render(
+    <HelloMessage message="World" />, 
+    document.getElementById('root')
+);
+*/
+</script>
+</body>
+</html>
