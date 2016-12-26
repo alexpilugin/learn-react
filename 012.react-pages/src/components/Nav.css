@@ -1,0 +1,21 @@
+.nav {
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: aliceblue;
+    padding: 10px;
+}
+.nav-buttons {
+    display: block;
+    position: absolute;
+    top:20px;
+    width: 200px;
+    right: 20px;
+}
+.nav-buttons button {
+    float: right;
+}
+.nav-button {
+    margin: 5px;
+    cursor: pointer;
+}
