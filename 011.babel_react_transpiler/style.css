@@ -1,0 +1,45 @@
+* {
+        margin: 0px;
+        padding: 0px;
+        font-family: monospace;
+    }
+footer {
+        display: block;
+        height: 5vh;
+        overflow: auto;
+        background-color: pink;
+        color: red;
+        font-size: 14px;
+        padding-left: 10px;
+    }
+.container {
+        height: 95vh;
+        display: flex;
+        width: 100%;
+    }
+pre {
+        background-color: #f8f8f8;
+        white-space: pre-wrap;       /* css-3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word; /* normal; break-word; */
+        overflow-y: scroll;
+        border-left: solid 1px black;
+        margin: 0px;
+    }
+pre, textarea {
+        width: 49.5%;
+        font-family: monospace;
+        margin: 0;
+        padding: 10px;
+        color: #222;
+        font-size: 14px;
+        display: block;
+    }
+textarea {
+  border: none;
+}
+textarea:focus { 
+      outline: 0;
+ }
