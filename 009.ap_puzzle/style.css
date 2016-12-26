@@ -1,0 +1,148 @@
+.container {
+    width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container  * {
+    text-align: center;
+}
+.img1, .img2 {
+    background-repeat:no-repeat;
+    width: 108px;
+    height: 108px;
+    float: left;
+}
+.img1 {
+    background-image: url(img/pic_540x540.jpg);
+}
+.img2 {
+    background-image: url(img/pic2_540x540.jpg);
+}
+.img3 {
+    background-image: url(img/pic3_540x540.jpg);
+}
+.field {
+    width: 540px;
+}
+.cell {
+    display: block;
+    width: 108px;
+    height: 108px;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 108px;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: white;
+}
+.cell:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+.field {
+    width: 540px;
+    height: 540px;
+    border: 2px solid gray; 
+}
+.btn {
+    width: 150px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.level-btn {
+    width: 50px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;    
+}
+.green {
+    border: 2px solid green;
+}
+.blue {
+    border: 2px solid blue;
+}
+/*
+.puzzle-1 {
+    background-position: 0 0;
+}
+.puzzle-2 {
+    background-position: -108px 0px;
+}
+.puzzle-3 {
+    background-position: -216px 0px;
+}
+.puzzle-4 {
+    background-position: -324px 0px;
+}
+.puzzle-5 {
+    background-position: -432px 0px;
+}
+
+.puzzle-6 {
+    background-position: 0 -108px;
+}
+.puzzle-7 {
+    background-position: -108px -108px;
+}
+.puzzle-8 {
+    background-position: -216px -108px;
+}
+.puzzle-9 {
+    background-position: -324px -108px;
+}
+.puzzle-10 {
+    background-position: -432px -108px;
+}
+
+.puzzle-11 {
+    background-position: 0 -216px;
+}
+.puzzle-12 {
+    background-position: -108px -216px;
+}
+.puzzle-13 {
+    background-position: -216px -216px;
+}
+.puzzle-14 {
+    background-position: -324px -216px;
+}
+.puzzle-15 {
+    background-position: -432px -216px;
+}
+
+.puzzle-16 {
+    background-position: 0 -324px;
+}
+.puzzle-17 {
+    background-position: -108px -324px;
+}
+.puzzle-18 {
+    background-position: -216px -324px;
+}
+.puzzle-19 {
+    background-position: -324px -324px;
+}
+.puzzle-20 {
+    background-position: -432px -324px;
+}
+
+.puzzle-21 {
+    background-position: 0 -432px
+}
+.puzzle-22 {
+    background-position: -108px -432px
+}
+.puzzle-23 {
+    background-position: -216px -432px
+}
+.puzzle-24 {
+    background-position: -324px -432px
+}
+.puzzle-25 {
+    background-position: -432px -432px
+}
+*/
