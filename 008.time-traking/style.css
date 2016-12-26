@@ -1,0 +1,138 @@
+body {
+    background-color: lightgray;
+    font-family: 'Roboto', sans-serif;
+    color: #13527c;
+}
+hr {
+    border: none;
+    color: #13527c;
+    background-color: #13527c;
+    height: 2px;
+    clear: both;
+    margin: 0px;
+}
+a { text-decoration: none; }
+.clear { clear: both; }
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    margin: 0;
+}
+.centered {
+    text-align: center;
+}
+#content {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card {
+    background-color: white;
+    border: 2px solid;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 5px;
+    float:left;
+    width: 400px;
+    height: 155px;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.4);
+}
+.card .content {
+    width: 100%;
+}
+.icons-container {
+    position: relative;
+    float: right;
+    height: 28px;
+}
+.timer-icons {
+    width: 64px;
+    height: 28px;
+    margin-bottom: 10px;
+    position: absolute;
+    right: 5px;
+}
+.edit-icon, .trash-icon {
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    margin: 5px;
+    font-size: 1.5em;
+}
+.edit-icon {
+    color: mediumblue;
+}
+.trash-icon {
+    color: firebrick;
+}
+.title {
+    font-size: 1.5em;
+    font-weight: 800;
+}
+.start {
+    clear: both;
+}
+.buttons {
+    margin-top: 15px;
+}
+.button {
+    background-color: white;
+    border: 2px solid;
+    border-radius: 6px;
+    padding: 6px; 
+    margin-left: 3px;
+    margin-right: 3px;
+    cursor: pointer; 
+    box-sizing: border-box;
+    font-weight: 800;
+}
+.button:hover {
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.4);
+}
+.blue {
+    color: mediumblue;
+    border-color: mediumblue;
+}
+.red {
+    color: firebrick;
+    border-color: firebrick;
+}
+.w50 {
+    width: 48.5%;
+}
+.w100 {
+    width: 100%;
+    box-sizing: border-box;
+}
+.plus {
+    margin: 5px;
+    float:left;
+    width: 424px;
+}
+.plus-button {
+    width: 99%;
+    font-size: 1.2em;
+}
+label {
+    color: gray;
+    font-size: 0.75rem;
+}
+input[type="text"] {
+    background: #ffffff !important;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    outline: none;
+    border: 1px solid lightgray;
+    padding: 3px;
+    padding-left: 10px;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: mediumblue;
+}
