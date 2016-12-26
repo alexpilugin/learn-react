@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>A.Pilugin. My links (ReactJS)!</title>
+    <meta charset="utf-8">
+    <!-- ERROR:
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.js"></script>
+    -->
+    <!-- ERROR:
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.19.0/babel.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,800" rel="stylesheet">
+
+    <style>
+        body { 
+            background-color: lightgray;
+            font-family: 'Roboto', sans-serif;
+        }
+        div * {
+            color: #13527c;
+        }
+        h3 {
+            margin: 0px;
+        }
+        p {
+            margin-bottom: 0px;
+        }
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .links-list {
+            padding: 0px;
+            margin: 0px;
+        }
+        .item {
+            display:block;
+            border-bottom: 1px red solid;
+            padding: 5px;
+            -webkit-transition: background-color 650ms linear;
+            -moz-transition: background-color 650msv linear;
+            -o-transition: background-color 650ms linear;
+            -ms-transition: background-color 650ms linear;
+            transition: background-color 650ms linear;
+        }
+        .item:hover {
+            background-color:white;
+            -webkit-transition: background-color 650ms linear;
+            -moz-transition: background-color 650ms linear;
+            -o-transition: background-color 650ms linear;
+            -ms-transition: background-color 650ms linear;
+            transition: background-color 650ms linear;
+        }
+        .votes {
+            float: right;
+            width: 70px;
+            height: 50px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            cursor: pointer;
+            border: 2px solid;
+            border-radius: 5px;
+            background-color: white;
+        }
+        hr {
+            border: none;
+            color: red;
+            background-color: red;
+            height: 2px;
+            clear: both;
+            margin: 0px;
+        }
+        .clear {
+            clear: both;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        div { color: red; }
+        .centered { text-align: center; }
+        .description {
+            float: left;
+        }
+        .svg-star {
+            float: left;
+            width: 65px;
+            height: 65px;
+            margin-right: 10px;
+            margin-left: 10px;
+           /* background-size: 45px 45px;
+            background-size: cover; */
+            background-color: mediumvioletred;
+            mask-image: url('star-icon.svg');
+            mask-repeat: no-repeat;
+            -webkit-mask-image:  url('star-icon.svg');
+            -webkit-mask-repeat: no-repeat;
+        }
+        .svg-star:hover {
+            background-color:antiquewhite;
+            cursor: pointer;    
+        }
+        @media screen and (max-width: 639px) {
+            .svg-star {
+                display: none;
+            }
+            .container * {
+                width: 100%;
+                text-align: center;
+            }
+            .votes {
+                clear: both;
+                width: 100%;
+                margin-top: 5px;
+                background-color: #c5e8ff;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class=" centered header">A.Pilugin. My links (JSX, Babel, ReactJS)</h1>
+    <hr />
+    <div id="content"> </div>
+</div>
+
+
+<div id="root">
+    <!-- This element's contents will be replaced with your component. -->
+</div>
+
+
+<script type = "text/babel">
+
+const Data = [{ id: 1, title: 'My profile on LinkedIn', 
+    url: 'https://uk.linkedin.com/in/alexpilugin',
+    description: 'uk.linkedin.com/in/alexpilugin',
+    votes: '17',
+    //votes: generateVoteCount(),
+},
+{ id: 2, title: 'My profile on CreativePool', 
+    url: 'https://creativepool.com/pilugin/projects/',
+    description: 'creativepool.com/pilugin/projects/',
+    votes: '16',
+    //votes: generateVoteCount(),    
+},
+{ id: 3, title: 'My web portfolio', 
+    url: 'https://goo.gl/YwdQJb',
+    description: 'My web portfolio. Assignment from LSBF',
+    votes: '15',
+    //votes: generateVoteCount(),    
+},
+{ id: 4, title: 'This single-page app. (My links with React)', 
+    url: 'https://goo.gl/7BqWzs',
+    description: '(My links. JSX, Babel, ReactJS)',
+    votes: '14',
+    //votes: generateVoteCount(),    
+},
+{ id: 5, title: 'My time tracking app', 
+    url: 'https://goo.gl/SyXSyd',
+    description: 'My time tracking app. JSX, Babel, ReactJS, Font Awesome',
+    votes: '13',
+    //votes: generateVoteCount(),    
+},
+{ id: 6, title: 'My puzzle game on React', 
+    url: 'https://goo.gl/rRejbD',
+    description: 'My puzzle game. JSX, Babel, ReactJS',
+    votes: '12',
+    //votes: generateVoteCount(),    
+},
+{ id: 7, title: 'Unique html5 video player skin', 
+url: 'https://goo.gl/8ykWRe',
+    description: 'html5 video player skin (Adobe Edge Animate, js, svg)',
+    votes: '11',
+    //votes: generateVoteCount(),    
+},
+{ id: 8, title: 'CSS/SVG Labyrinth', 
+url: 'https://goo.gl/J4Nwke',
+    description: 'Simple CSS3/SVG/JavaScript game',
+    votes: '10',
+    //votes: generateVoteCount(),    
+},
+{ id: 10, title: 'Sorting of the set of numbers', 
+url: 'https://goo.gl/A32Ypp',
+    description: 'jQuery-based game “Sort numbers” 4-hours task on interview',
+    votes: '8',
+    //votes: generateVoteCount(),    
+},
+{ id: 11, title: 'Single page prototype. Java/GWT. ', 
+url: 'https://goo.gl/JTSKNB',
+    description: 'single page website, interactive prototype, Java/ GWT',
+    votes: '7',
+    //votes: generateVoteCount(),    
+},
+{ id: 12, title: 'Sir Sean Connery fan site', 
+url: 'http://tinyurl.com/jn7qjbz',
+    description: 'LSBF Web authoring assignment (html5, css3, js, jQuery, fancyBox, nivo-slider, audio',
+    votes: '6',
+    //votes: generateVoteCount(),    
+},
+{ id: 13, title: 'GCM website (logo, 3d, animation, web)', 
+url: 'http://mgirengun.net/lcca/wa/alex/gcm/production.html',
+    description: 'website prototype with responsive design and slider. Assignment for smartcookie-design, Java/GWT',
+    votes: '5',
+    //votes: generateVoteCount(),    
+},
+{ id: 14, title: 'www.crownarkclub.com. Responsive single page temporary website', 
+url: 'https://goo.gl/ubpDy1',
+    description: 'Responsive single page temporary website (HTML, CSS, DartJS)',
+    votes: '4',
+    //votes: generateVoteCount(),    
+},
+{ id: 15, title: 'Web banners. Different technologies', 
+url: 'https://goo.gl/hthX2Z',
+    description: 'Flash banners, GSAP (GreenSock), jQuery',
+    votes: '3',
+    //votes: generateVoteCount(),    
+},
+{ id: 16, title: 'Animated Stars. Web advert of LSBF', 
+url: 'https://goo.gl/0oagLg',
+    description: 'Tumult Hype. Web advert of interactive media course in LSBF',
+    votes: '2',
+    //votes: generateVoteCount(),    
+},
+{ id: 17, title: 'Tumult Hype. Planet System', 
+url: 'https://goo.gl/C4NLo6',
+    description: 'Tumult Hype. Planet System. My test work at LSBF',
+    votes: '1',
+    //votes: generateVoteCount(),    
+},
+]
+
+//export default Data;
+
+    var Product = React.createClass({ 
+        handleUpVote: function (){
+            this.props.onVote(this.props.id); //onVote=this.handleProductUpVote(productId)
+        },
+        render: function () {
+            return (
+            <div className='item'>
+                <div className='image svg-star'></div>
+                <div className='description'>
+                <h3><a href={this.props.url}> {this.props.title}</a></h3>
+                <p>{this.props.description}</p>
+                </div>
+                <button className='votes' onClick={this.handleUpVote}> {this.props.votes} </button>
+                <div className='clear'></div>
+            </div>
+            ) 
+        }
+    });
+
+    var ProductList = React.createClass({
+        getInitialState: function (){
+            return {
+                products: [],
+            };
+        },
+        componentDidMount: function () {
+            this.updateState();
+        },
+        updateState: function () {
+            const products = Data.sort((a,b) => {
+                return b.votes - a.votes;
+            });
+            this.setState({ products: products});
+        },
+        handleProductUpVote: function (productId) {
+            Data.forEach((el) => {
+                if (el.id === productId){
+                    el.votes++;
+                    return;
+                }
+            });
+            this.updateState();
+        },
+        render: function() {
+            const products = this.state.products.map((product) => {
+                return (
+                    <Product
+                        key={'product-' + product.id}
+                        id = {product.id}
+                        title ={product.title}
+                        description={product.description}
+                        url={product.url}
+                        votes={product.votes}
+                        onVote={this.handleProductUpVote}
+                    />
+                );
+            });
+            return (
+                <div className='links-list'>
+                {products}
+                </div>
+            );
+        },
+    });
+    var content = document.getElementById('content');
+    ReactDOM.render(<ProductList />,content);
+
+
+/*
+//https://gist.github.com/danawoodman/9cfddb1a0c934a35f31a
+var HelloMessage = React.createClass({
+  render: function () {
+    return <h1>Hello {this.props.message}!</h1>;
+  }
+});
+
+ReactDOM.render(
+    <HelloMessage message="World" />, 
+    document.getElementById('root')
+);
+*/
+</script>
+</body>
+</html>
