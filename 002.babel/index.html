@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>A.Pilugin. Hello World!</title>
+
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.19.0/babel.min.js"></script>
+    <style>
+        body { text-align: center; }
+        div { color: red; }
+    </style>
+</head>
+<body>
+    <a href="http://codepen.io/gaearon/pen/rrpgNB/"> Hello World! React.js (codepen.io) </a><br />
+    <a href="http://babeljs.io/repl"> Hello World! React.js (babeljs.io) </a><br />
+
+<div id="root">
+    <!-- This element's contents will be replaced with your component. -->
+</div>
+<script type = "text/babel">
+    const element = <div><h1>Hello World!</h1><p>(from ReactJS with Babel)</p></div>;
+    const container = document.getElementById('root');
+    ReactDOM.render(element, container);
+</script>
+</body>
+</html>
