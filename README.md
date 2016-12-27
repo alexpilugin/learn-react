@@ -1,2 +1,2 @@
 # learn-react
-I place here code I create while learn **React**.
+I place here code I create while I learn **React**.
