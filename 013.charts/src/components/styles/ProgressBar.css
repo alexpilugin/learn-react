@@ -1,0 +1,15 @@
+.ProgressBar {
+    display: flex;
+	justify-content: bottom;
+    align-items: flex-end;
+    width: 12px;
+    background-color: #eee;
+    min-height: 50px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+.ProgressBar > span {
+    width: 12px;
+    background-color: lightslategray;  
+    transition: height 2s ease-out;
+}
